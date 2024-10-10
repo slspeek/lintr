@@ -1,6 +1,7 @@
 FROM debian:12.7
 
-RUN apt-get update
-RUN apt-get install -y r-base r-cran-lintr && apt-get clean
+RUN apt-get update && \
+    apt-get -y install r-base
+RUN apt-get install -y r-cran-lintr
 
 CMD ["bash"]
